@@ -1,0 +1,183 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: "Noto Sans TC", sans-serif !important;
+    overflow-x: hidden;
+}
+
+.clear {
+    clear: both;
+}
+
+.wrap {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.navs {
+    max-width: 100%;
+    padding-bottom: 40%;
+    background-image: url("../../images/ceac3e.png");
+    background-size: cover;
+    // object-position: center;
+    // object-fit: cover;
+    position: relative;
+    background-position: center;
+    background-attachment: fixed;
+    .nav-icon {
+        position: absolute;
+        width: 35%;
+        top: 15%;
+        left: 35%;
+    }
+    .nav-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        background-color: white;
+        opacity: 0.8;
+        z-index: 999;
+    }
+    .navbar-pic {
+        margin: 5px 0 0 40px;
+        width: 90px;
+        display: block;
+        float: left;
+    }
+}
+
+.menu {
+    margin-left: 40px;
+    margin-top: 30px;
+    float: left;
+    li {
+        list-style: none;
+        float: left;
+        a {
+            font-family: "Gabriola";
+            font-size: 25px;
+            position: relative;
+            text-decoration: none;
+            color: #7a6051;
+            padding-right: 50px;
+            &:hover {
+                color: gray;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.menu li a::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 2px;
+    top: 30px;
+    background: #7a6051;
+    width: 0%;
+    transition: 0.5s;
+}
+
+.menu li a.active::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 2px;
+    top: 30px;
+    background: #7a6051;
+    width: 0%;
+    transition: 0.5s;
+    width: 60%;
+}
+
+.menu li a:hover:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 2px;
+    top: 30px;
+    background: #7a6051;
+    width: 60%;
+}
+
+.current-color {
+    color: gray;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    .navs {
+        background-attachment: unset;
+        padding-bottom: 60%;
+        .nav-icon {
+            position: absolute;
+            width: 35%;
+            top: 40%;
+            left: 35%;
+        }
+    }
+    .menu {
+        max-height: 0px;
+        overflow: hidden;
+        position: absolute;
+        text-align: center;
+        transition: 1.5s;
+        top: 78px;
+        margin: 0;
+        width: 100%;
+        z-index: 100;
+        background: white;
+    }
+    .mobile-menu {
+        display: block;
+        float: right;
+        color: #7a6051;
+        margin-top: 3%;
+        margin-right: 7%;
+    }
+    .menu li {
+        float: none;
+        margin-bottom: 20px;
+        a {
+            padding: 0;
+            text-align: center;
+        }
+    }
+    .open .menu {
+        max-height: 250px;
+    }
+    .mobile-menu i.active {
+        transform: rotate(180deg);
+        transition: all 1s;
+    }
+    .mobile-menu .far.fa-bars {
+        transform: rotate(-180deg);
+        transition: all 1s;
+    }
+}
+
+.special::after {
+    content: "";
+    z-index: 999;
+    position: absolute;
+    height: 2px;
+    top: 30px;
+    background: #7a6051;
+    width: 0%;
+    left: 0;
+    transition: 0.5s;
+    width: 60%;
+}
+
+@media (max-width:992px) {
+    .special::after {
+        width: 100%;
+    }
+}

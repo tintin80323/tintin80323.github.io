@@ -1,0 +1,147 @@
+.content-3 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact {
+    color: #a18a7a;
+    text-align: center;
+    line-height: 200px;
+    letter-spacing: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    &::before {
+        border-top: 4px solid #a18a7a;
+        display: block;
+        height: 1px;
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 4em;
+        width: 37%;
+        z-index: 999;
+    }
+    &::after {
+        border-top: 4px solid #a18a7a;
+        display: block;
+        height: 1px;
+        content: " ";
+        position: absolute;
+        right: 0;
+        top: 4em;
+        width: 37%;
+        z-index: 999;
+    }
+}
+
+.map-content {
+    display: flex;
+    .map-container {
+        flex: 70%;
+    }
+    .google-map {
+        flex: 30%;
+        margin-top: 250px;
+        h2 {
+            font-weight: bold;
+            font-size: 19px;
+            letter-spacing: 3px;
+            color: #a18a7a;
+        }
+        p {
+            line-height: 30px;
+            color: #a18a7a;
+            margin-top: 20px;
+            letter-spacing: 6px;
+            text-align: left;
+        }
+    }
+}
+
+.map {
+    margin: 0 auto;
+    margin-top: 80px;
+    max-width: 70%;
+}
+
+.map-map {
+    width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.map-store {
+    width: 100%;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+
+.map li {
+    vertical-align: middle;
+    margin-left: 40px;
+    display: inline-block;
+    list-style: none;
+    padding: 20px 5px;
+}
+
+.map li p {
+    line-height: 40px;
+    letter-spacing: 2px;
+    color: #a18a7a;
+}
+
+.map li .title {
+    color: #a18a7a;
+    text-decoration: underline;
+    vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+.map li .title-1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media (max-width:992px) {
+    .map-content {
+        display: block;
+        .map-container {
+            width: 100%;
+        }
+        .google-map {
+            width: 85%;
+            flex: 0%;
+            margin: 0 auto;
+        }
+    }
+    .map {
+        .map-map {
+            max-width: 500px;
+        }
+    }
+    .iframe-rwd {
+        position: relative;
+        padding-bottom: 50%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .contact {
+        &::before {
+            display: none;
+        }
+        &::after {
+            display: none;
+        }
+    }
+}

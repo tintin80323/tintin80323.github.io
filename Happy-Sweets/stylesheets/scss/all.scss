@@ -1,0 +1,20 @@
+@import "../bootstrap/scss/functions";
+@import "pages/variables";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/bootstrap.scss";
+
+//pages
+
+@import "pages/_index.scss";
+@import "pages/_shopping-cart";
+@import "pages/_shopping-notes";
+@import "pages/_product";
+@import "pages/_news.scss";
+@import "pages/_access.scss";
+@import "pages/_contact.scss";
+
+
+//tools
+@import "pages/_header";
+@import "pages/_cssreset";
+@import "pages/_footer.scss";
